@@ -38,8 +38,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if (!empty($username && $admin_password)){
         try{
-            $stm= $conn->prepare("SELECT * FROM admin WHERE Username=:u");
-            $stm->bindParam(":u",$username, PDO::PARAM_STR);
+            $stm= $conn->prepare("SELECT * FROM security WHERE IDNo=:u");
+            $stm->bindParam(":u",$username, PDO::PARAM_INT);
             $stm->execute();
             $userRow= $stm->fetch(PDO::FETCH_ASSOC);
     
@@ -47,8 +47,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
                 if (password_verify($admin_password,$userRow['Password'])){
                     session_start();
-                    $_SESSION['admin']=$username;
-                    header('location: dashboard.php');
+                    $_SESSION['security']=$username;
+                    header('location: home.php');
                 }else{
                     $passwordErr='Incorrect Password';
                     $Err=array($passwordErr);
@@ -68,7 +68,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 }
 ?>
-
 <br>
 <div class="container">    
     <div class="card w-50 mx-auto">
@@ -79,7 +78,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 <div class="form-group">
                     <input type="text" name="username" class="form-control" id="username" value="<?php if(!empty($username)){echo $username;}?>"
                     placeholder="<?php if(!empty($username)){echo $username;}else{echo 'Username';}?>">
-                    <small class="form-text text-muted">Enter your JESP account username</small>
+                    <small class="form-text text-muted">Enter your ID Number</small>
                     <small class="form-text text-danger font-italic font-weight-bold"></small>
                     <?php if (!empty($requiredUsername)){
                         echo '<small class="form-text text-danger font-italic font-weight-bold">'.$requiredUsername.'</small>';
@@ -91,7 +90,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" class="form-control" id="password" placeholder="Password" >
-                    <small class="form-text text-muted">Enter your JESP account password</small>
+                    <small class="form-text text-muted">Enter your Password</small>
                     <small class="form-text text-danger font-italic font-weight-bold"></small>
                     <?php 
                         if (!empty($requiredPassword)){

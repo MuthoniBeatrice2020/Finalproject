@@ -4,8 +4,8 @@
     require_once 'model/config.php';
 
     session_start();
-    if (isset($_SESSION['admin'])){
-        $admin = $_SESSION['admin'];
+    if (isset($_SESSION['security'])){
+        $security = $_SESSION['security'];
     }
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>JESP [Admin]</title>
+    <title>JESP [Security]</title>
     <link rel="stylesheet" href="<?php echo $fontawesome_css;?>">
     <link rel="stylesheet" href="<?php echo $bootstrap_css;?>">
     <link rel="stylesheet" href="<?php echo $datatables_css;?>">
@@ -26,7 +26,7 @@
     <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">JKUAT Electronic Security Portal</span>
         <?php 
-        if(isset($admin)){
+        if(isset($security)){
             echo '
             <ul class="navbar-nav justify-content-end">
                 <li class="nav-item">
