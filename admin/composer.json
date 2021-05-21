@@ -1,0 +1,25 @@
+{   "name": "name/jesp",
+    "description": "Electronic Security Portal",
+    "require": {
+        "picqer/php-barcode-generator" : "2.2.0@stable",
+        "twbs/bootstrap" :"4.5.0@stable",
+        "datatables/datatables" : "1.10.21@stable",
+        "fortawesome/font-awesome" : "5.13.1@stable"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/picqer/php-barcode-generator.git"
+        },{
+            "type": "vcs",
+            "url":  "https://github.com/twbs/bootstrap.git"
+        },{
+            "type": "vcs",
+            "url":  "https://github.com/DataTables/DataTables.git"
+        },{
+            "type": "vcs",
+            "url":  "https://github.com/FortAwesome/Font-Awesome"
+        }
+
+    ]
+}
