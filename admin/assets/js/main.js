@@ -7,7 +7,7 @@ $(document).ready(function() {
     });
     //displaying tables in data table format
     $('#usersTable').DataTable();
-    $('#SecuritysTable').DataTable();
+    $('#securityTable').DataTable();
     $('#deptTable').DataTable();
     $('#catTable').DataTable();
     $('#ticTable').DataTable();
@@ -29,18 +29,18 @@ $(document).ready(function() {
     });
 
     //manage Guard view
-    $('#addSecuritysToggle').click(function () {
-        $('#viewSecuritys').hide();
-        $('#addSecuritys').show();
-        $('#addSecuritysToggle').addClass('disabled');
-        $('#viewSecuritysToggle').removeClass('disabled');
+    $('#addSecurityToggle').click(function () {
+        $('#viewSecurity').hide();
+        $('#addSecurity').show();
+        $('#addSecurityToggle').addClass('disabled');
+        $('#viewSecurityToggle').removeClass('disabled');
     });
-    $('#viewSecuritysToggle').click(function () {
-        $('#addSecuritys').hide();
-        $('#viewSecuritys').show();
+    $('#viewSecurityToggle').click(function () {
+        $('#addSecurity').hide();
+        $('#viewSecurity').show();
         location.reload('true');
-        $('#viewSecuritysToggle').addClass('disabled');
-        $('#addSecuritysToggle').removeClass('disabled');
+        $('#viewSecurityToggle').addClass('disabled');
+        $('#addSecurityToggle').removeClass('disabled');
     });
 
     //manage department view

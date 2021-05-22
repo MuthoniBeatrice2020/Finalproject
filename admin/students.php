@@ -37,7 +37,6 @@
                         <th scope="col">ID No</th>
                         <th scope="col">Faculty</th>
                         <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
                         <th scope="col">Password</th>
                     </tr>
                     </thead>
@@ -59,7 +58,6 @@
                                     <td id='$userRow[IDNo]'>" . $userRow['IDNo'] . "</td>
                                     <td id='$userRow[Faculty]'>" . $userRow['Faculty'] . "</td>
                                     <td><a href='edit_students.php?edit=$userRow[ID]' class='btn badge badge-info'><i class='fas fa-edit'></i> edit</a></td>
-                                    <td><span id='$userRow[ID]' class='btn badge badge-info delete'><i class='fas fa-trash'></i> delete</span></td>
                                     <td><a href='reset_user_password.php?reset=$userRow[ID]'><i class='fas fa-user-shield'></i> change</a></td> 
                                 </tr>
                                 ";

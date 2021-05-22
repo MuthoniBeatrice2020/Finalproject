@@ -65,11 +65,11 @@ try {
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 pb-1 border-bottom">
         <h1 class="h2">Dashboard</h1>
     </div>
-    <h5 class="font-weight-bold pt-1 pb-1">Devices</h5>
+    <h5 class="text-info font-weight-bold pt-1">Devices</h5>
     <div class="row">
         <!-- Total device(s) Count card  -->
         <div class="col-xl col-md-6 mb-2">
-            <div class="card border-left-info shadow h-80 py-2">
+            <div class="card border-left-info shadow h-80 py-1">
                 <div class="card-body">
                     <div class="row align-items-center">
                         <div class="col mr-2">
@@ -85,7 +85,7 @@ try {
         </div>
         <!-- Open device(s) Count Card -->
         <div class="col-xl col-md-6 mb-2">
-            <div class="card border-left-primary shadow h-80 py-2">
+            <div class="card border-left-primary shadow h-80 py-1">
                 <div class="card-body">
                     <div class="row align-items-center">
                         <div class="col mr-2">
@@ -101,7 +101,7 @@ try {
         </div>
         <!-- Solved device(s) Count Card -->
         <div class="col-xl col-md-6 mb-2">
-            <div class="card border-left-warning shadow h-80 py-2">
+            <div class="card border-left-warning shadow h-80 py-1">
                 <div class="card-body">
                     <div class="row align-items-center">
                         <div class="col mr-2">
@@ -120,7 +120,7 @@ try {
     <div class="row">
         <!-- Security Guard Count Card -->
         <div class="col-xl col-md-6 mb-2">
-            <div class="card border-left-info shadow h-100 py-2">
+            <div class="card border-left-info shadow h-100 py-1">
                 <div class="card-body">
                     <div class="row align-items-center">
                         <div class="col mr-2">
@@ -136,7 +136,7 @@ try {
         </div>
         <!-- Student Count Card -->
         <div class="col-xl col-md-6 mb-2">
-            <div class="card border-left-success shadow h-100 py-2">
+            <div class="card border-left-success shadow h-100 py-1">
                 <div class="card-body">
                     <div class="row align-items-center">
                         <div class="col mr-2">
@@ -152,7 +152,7 @@ try {
         </div>
         <!-- Category Count Card -->
         <div class="col-xl col-md-6 mb-2">
-            <div class="card border-left-success shadow h-100 py-2">
+            <div class="card border-left-success shadow h-100 py-1">
                 <div class="card-body">
                     <div class="row align-items-center">
                         <div class="col mr-2">
@@ -174,7 +174,7 @@ try {
                     <strong class="text-info">Device Status</strong>
                 </div>
                 <div class="card-body" style="position: relative;">
-                    <canvas class="w-100" id="pieDS" width="400px" height="400px"></canvas>
+                    <canvas class="w-100" id="pieDS" width="200px" height="200px"></canvas>
                 </div>
             </div>
         </div>
@@ -184,11 +184,12 @@ try {
                     <strong class="text-info">Device Model</strong>
                 </div>
                 <div class="card-body" style="position: relative;">
-                    <canvas class="w-100" id="pieDM" width="400px" height="400px"></canvas>
+                    <canvas class="w-100" id="pieDM" width="200px" height="200px"></canvas>
                 </div>
             </div>
         </div>
     </div>
+</main>
 
     <!-- Bootstrap core JavaScript-->
     <script src="<?php echo $jquery_js;?>"></script>

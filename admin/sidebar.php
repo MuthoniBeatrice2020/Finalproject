@@ -1,8 +1,7 @@
 <div class="container-fluid">
     <div class="row">
-        <nav class="col-2 d-none d-md-block bg-dark sidebar" style="min-height: 760px;">
+        <nav class="col-2 d-none d-md-block bg-dark sidebar" style="height: 100%;">
             <div class="sidebar-sticky">
-
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="dashboard.php">

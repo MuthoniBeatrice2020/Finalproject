@@ -10,24 +10,24 @@
         </h5>
     </div>
     <div class="mb-3">
-        <button class="btn btn-primary float-left" id="viewAgentsToggle">
+        <button class="btn btn-primary float-left" id="viewSecurityToggle">
             <i class="fas fa-users"></i>
             View Guards
         </button>
-        <button class="btn btn-primary float-right" id="addAgentsToggle">
+        <button class="btn btn-primary float-right" id="addSecurityToggle">
             <i class="fas fa-user-plus"></i>
             Add Guards
         </button>
     </div>
     <div class="clearfix mb-3"></div>
     <hr>
-    <div class="card shadow" id="viewAgents">
+    <div class="card shadow" id="viewSecurity">
         <div class="card-header">
             <h6 class="m-0 text-monospace font-weight-bold text-primary">List of Guards [security]</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered" id="agentsTable">
+                <table class="table table-bordered" id="securityTable">
                     <thead>
                     <tr>
                     <th scope="col">ID</th>
@@ -35,7 +35,6 @@
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
                     <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
                     <th scope="col">Password</th>
                     </tr>
                     </thead>
@@ -55,7 +54,6 @@
                             <td>" . $row['FirstName'] . "</td>
                             <td>" . $row['LastName'] . "</td>
                             <td><a href='edit_security.php?edit=$row[ID]' class='badge badge-info'><i class='fas fa-edit'></i> edit</a></td>
-                            <td><a href='delete_security.php?delete=$row[ID]' class='badge badge-info'><i class='fas fa-trash'></i> delete</a></td> 
                             <td><a href='reset_security_password.php?reset=$row[ID]'><i class='fas fa-user-shield'></i> change</a></td> 
                        </tr>
                   ";
@@ -71,7 +69,7 @@
         </div>
     </div>
     <div class="clearfix"></div>
-    <div class="card w-75 mx-auto shadow" id="addAgents">
+    <div class="card w-75 mx-auto shadow" id="addSecurity">
         <div class="card-header">
             <span class="card-title text-primary text-monospace font-weight-bold">Add Guard [security]</span>
         </div>
@@ -112,4 +110,5 @@
             </form>
         </div>
     </div>
+</main> 
 <?php include 'layout/footer.php';?>

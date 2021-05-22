@@ -37,7 +37,6 @@
                         <th>Status</th>
                         <th>Barcode</th>
                         <th>Edit</th>
-                        <th>Delete</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -58,7 +57,6 @@
                                 <td><span class='badge badge-success'> Active </span></td>
                                 <td><a href='barcode.php?generate=". $t_row['ID'] ."' class='btn badge badge-info'> Generate </a></td>
                                 <td><a href='edit_devices.php?edit=". $t_row['ID'] ."' class='btn badge badge-info'><i class='fas fa-edit'></i> edit  </a></td>
-                                <td><a href='edit_devices.php?delete=". $t_row['ID'] ."' class='btn badge badge-info'><i class='fas fa-trash'></i> delete </a></td>
                             </tr>     
                          ";                            
                         }
@@ -87,7 +85,6 @@
                             <th>Registration Date</th>
                             <th>Status</th>
                             <th>Edit</th>
-                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody id="tktsTab">
@@ -106,8 +103,7 @@
                                         <td>" . $t_row['Model'] . "</td>
                                         <td>" .date('l d/m/y h:i A',strtotime($t_row['DATETIME'])) . "</td>
                                         <td><span class='badge badge-warning'> Stolen </span></td>
-                                        <td><a href='edit_devices.php?edit=". $t_row['ID'] ."' class='btn badge badge-info'><i class='fas fa-edit'></i> edit </a></td>
-                                        <td><a href='edit_devices.php?delete=". $t_row['ID'] ."' class='btn badge badge-info'><i class='fas fa-trash'></i> delete </a></td>   
+                                        <td><a href='edit_devices.php?edit=". $t_row['ID'] ."' class='btn badge badge-info'><i class='fas fa-edit'></i> edit </a></td>  
                                     </tr>     
                                 ";                        
                                 }

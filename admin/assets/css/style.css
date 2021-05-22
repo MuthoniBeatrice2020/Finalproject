@@ -1,14 +1,12 @@
 *{
      margin: 0;
      box-sizing: border-box;
-
  }
-
 #emailErr, #passErr{
     color: firebrick;
     margin: 2px;
 }
-#addUsers, #addAgents, #addDept, #addCat, #viewEscTic{
+#addUsers, #addSecurity, #addDept, #addCat, #viewEscTic{
     display: none;
 }
 #green-bg{
