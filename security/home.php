@@ -10,7 +10,7 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table data-order='[[ 0, "desc" ]]' class="table table-hover" id="ticTable">
+                    <table data-order='[[ 0, "desc" ]]' class="table table-hover" id="deviceTable">
                         <thead>
                             <tr>
                                 <th>ID</th> 
