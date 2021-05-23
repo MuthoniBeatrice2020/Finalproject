@@ -11,7 +11,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="students.php">
-                            <i class="fas fa-users-cog"></i>
+                            <i class="fas fa-user-graduate"></i>
                             Students
                         </a>
                     </li>
@@ -23,7 +23,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="devices.php">
-                            <i class="fas fa-clipboard-list"></i>
+                            <i class="fas fa-sitemap"></i>
                             Devices
                         </a>
                     </li>

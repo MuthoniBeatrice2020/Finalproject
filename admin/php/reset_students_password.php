@@ -7,14 +7,14 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
     $msg = '';
     $Err = array();
     
-    //Validating securityId, not to be left blank
-    if (!empty($_POST['securityId'])){
-        $securityId = validateFormData($_POST['securityId']);
-        // echo $securityId;   
+    //Validating studentID, not to be left blank
+    if (!empty($_POST['studentID'])){
+        $studentID = validateFormData($_POST['studentID']);
+        // echo $studentID;   
     }else{
-        $securityId = null;
-        $msg = 'emptySecurityId';
-        $Err[] = 'emptySecurityId';
+        $studentID = null;
+        $msg = 'emptystudentID';
+        $Err[] = 'emptystudentID';
     }
 
     //Validating currentPass, not to be left blank
@@ -51,8 +51,8 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
     if ($newPass == $confirmPass){
         //Confirming current password
         try{
-            $stm= $conn->prepare("SELECT * FROM security WHERE ID=:sid");
-            $stm->bindParam(":sid",$securityId, PDO::PARAM_INT);
+            $stm= $conn->prepare("SELECT * FROM students WHERE ID=:sid");
+            $stm->bindParam(":sid",$studentID, PDO::PARAM_INT);
             $stm->execute();
             $userRow= $stm->fetch(PDO::FETCH_ASSOC);
     
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
         //update student details to the db
         try{
             $q= $conn->prepare("UPDATE security SET Password=:pass WHERE ID=:sid LIMIT 1");
-            $q->bindParam("sid",$securityId, PDO::PARAM_INT);
+            $q->bindParam("sid",$studentID, PDO::PARAM_INT);
             $q->bindParam("pass",$pass, PDO::PARAM_STR);      
             $v = $q->execute();
 
