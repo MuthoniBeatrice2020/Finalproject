@@ -370,7 +370,7 @@ $(document).ready(function() {
         }
     });
 
-    //add edit[security] validation
+    //edit [security] validation
     var validator = $('#editSecurityForm').validate({
         rules : {
             idNo:{
@@ -431,6 +431,69 @@ $(document).ready(function() {
             });
         }
     });
+
+    //change password [security] validation
+    var validator = $('#passSecurityForm').validate({
+        rules : {
+            currentPass:{
+                required: true,
+                minlength: 8        
+            },
+            newPass:{
+                required: true,
+                minlength: 8        
+            },
+            confirmPass:{
+                required: true,
+                minlength: 8,
+                equalTo: "#newPass"        
+            },
+        },
+        messages : {
+            currentPass:{
+                required: "Current Password is required",
+                minlength: jQuery.validator.format("Password should be at least {0} characters")        
+            },
+            newPass:{
+                required: "New Password is required",
+                minlength: jQuery.validator.format("Password should be at least {0} characters")        
+            },
+            confirmPass:{
+                required: "Confirm the new password",
+                minlength: jQuery.validator.format("Password should be at least {0} characters"),
+                equalTo: "Passwords do not match"       
+            },
+        },
+        errorPlacement: function (error, element) {
+            error.appendTo(element.next().next());
+        },
+        submitHandler: function (form) {
+            $.ajax({
+                url: "php/reset_security_password.php",
+                type: "POST",
+                data: $("#passSecurityForm").serialize(),
+                success: function (output) {
+                    output = $.trim(output);
+                    if (output == 'success'){
+                        $('.notify p').text("Security [Guard] password changed successfully");
+                        $('.notify').addClass("alert-success").fadeIn();
+                        $('#passSecurityForm')[0].reset();
+                    }else if(output == 'fail'){
+                        $('.notify p').text("Server Error, Try Again");
+                        $('.notify').addClass("alert-danger").fadeIn();
+                    }else{
+                        $('.notify p').text("Please Fill in all fields");
+                        $('.notify').addClass("alert-danger").fadeIn();
+                    }
+
+                },
+                error: function(output){
+                    console.log('An Error occurred !!!!!');
+                }
+            });
+        }
+    });
+
 
     //edit device validation
     var validator = $("#editDeviceForm").validate({

@@ -26,7 +26,7 @@
     <div class="clearfix mb-3"></div>
     <div class="card w-75 shadow mx-auto" id="editDevice">
         <div class="card-header">
-            <span class="card-title text-primary text-monospace font-weight-bold">Edit Device [Guard]</span>
+            <span class="card-title text-primary text-monospace font-weight-bold">Edit Device</span>
         </div>
         <div class="card-body">
             <div class="notify alert"><span>X</span>
