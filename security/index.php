@@ -3,8 +3,8 @@
 include 'layout/header.php';
 //session redirect
 
-if (isset($_SESSION['admin'])){
-    header('location: dashboard.php');
+if (isset($_SESSION['security'])){
+    header('location: home.php');
 }
 //form submission management
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
