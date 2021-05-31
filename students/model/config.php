@@ -7,9 +7,9 @@ date_default_timezone_set("Africa/Nairobi");
 
 // Set the database access information as constants:
 define('host','localhost');
-//define('user','root');
-define('DB_USER','root');
-define('DB_PASSWORD','');
+//define('user','admin');
+define('DB_USER','admin');
+define('DB_PASSWORD','TaLEEGXLACvWUmO4');
 
 try{
   //create connection

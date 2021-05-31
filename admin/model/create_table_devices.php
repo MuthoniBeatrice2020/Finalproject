@@ -14,6 +14,7 @@
                 SerialNo VARCHAR(255) NOT NULL UNIQUE KEY,
                 Model VARCHAR(255) NOT NULL,
                 Status INT(1) NOT NULL,
+                Comment VARCHAR(255) NOT NULL,
                 DATETIME TIMESTAMP NOT NULL 
             )";
             //use exec() because no results are returned

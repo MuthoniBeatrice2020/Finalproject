@@ -1,0 +1,154 @@
+*{
+     margin: 0;
+     box-sizing: border-box;
+
+ }
+
+#emailErr, #passErr{
+    color: firebrick;
+    margin: 2px;
+}
+#addUsers, #addAgents, #addDept, #addCat, #viewEscTic{
+    display: none;
+}
+#green-bg{
+    background-color: #007b75;
+}
+.notify{
+    display: none;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.notify span{
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    padding: 0.5% 1rem;
+    font-size: medium;
+}
+.notify span:hover{
+    cursor: pointer;
+}
+.text-xs {
+    font-size: .7rem;
+}
+.border-left-primary {
+    border-left: 0.25rem solid #007bff !important;
+}
+.border-left-success {
+    border-left: 0.25rem solid #1cc88a !important;
+}
+.border-left-info {
+    border-left: 0.25rem solid #36b9cc !important;
+}
+.border-left-warning {
+    border-left: 0.25rem solid #f6c23e !important;
+}
+.border-left-danger {
+    border-left: 0.25rem solid #e74a3b !important;
+}
+i {
+    cursor: pointer;
+}
+.feather {
+    width: 12px;
+    height: 12px;
+    vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+    min-height: 100%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50; /* Behind the navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .0);
+    font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5em;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+}
+
+.sidebar .nav-link {
+    font-weight: 100;
+    color: #fff;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: .85rem;
+    text-transform: uppercase;
+}
+
+/*
+ * Content
+ */
+
+[role="main"] {
+    padding-top: auto; /* Space for fixed navbar */
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .sidebar{
+        min-height: 100%;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .sidebar{
+        min-height: 768px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .sidebar{
+        min-height: 768px;
+    }
+
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .sidebar{
+        min-height: 768px;
+    }
+}

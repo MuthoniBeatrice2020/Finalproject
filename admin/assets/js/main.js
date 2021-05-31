@@ -1,10 +1,4 @@
 $(document).ready(function() {
-     //processing delete
-     $('.delete').click(function(event) {
-        var did = $(this).attr('id');
-        $('#did').val(did);
-        $('#deleteStudentModal').modal('show');
-    });
     //displaying tables in data table format
     $('#usersTable').DataTable();
     $('#securityTable').DataTable();

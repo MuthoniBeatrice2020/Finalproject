@@ -1,0 +1,21 @@
+{   "name": "name/jesp",
+    "description": "Electronic Security Portal",
+    "require": {
+        "twbs/bootstrap" :"4.5.0@stable",
+        "datatables/datatables" : "1.10.21@stable",
+        "fortawesome/font-awesome" : "5.13.1@stable"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/twbs/bootstrap.git"
+        },{
+            "type": "vcs",
+            "url":  "https://github.com/DataTables/DataTables.git"
+        },{
+            "type": "vcs",
+            "url":  "https://github.com/FortAwesome/Font-Awesome"
+        }
+
+    ]
+}
