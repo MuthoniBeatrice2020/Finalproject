@@ -5,4 +5,7 @@
 <script src="<?php echo $jqueryValidate_js;?>"></script>
 <script src="<?php echo $jqueryUi_js;?>"></script>
 <script src="<?php echo $datatables_js;?>"></script>
+<script src="<?php echo $pdfmake_js;?>"></script>
+<script src="<?php echo $vfs_fonts_js;?>"></script>
+<script src="<?php echo $buttons_html5_js;?>"></script>
 <script src="<?php echo $main_js;?>"></script>

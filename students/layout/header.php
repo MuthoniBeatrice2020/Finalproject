@@ -2,11 +2,6 @@
     require 'links.php';
     //db connection
     require_once 'model/config.php';
-
-    session_start();
-    if (isset($_SESSION['student'])){
-        $student = $_SESSION['student'];
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

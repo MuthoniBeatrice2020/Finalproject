@@ -1,13 +1,23 @@
 $(document).ready(function() {
     //processing delete
     $('.report-active').click(function(event) {
-    var deviceID = $(this).attr('id');
-    $('#deviceID').val(deviceID);
-    $('#reportDeviceModal').modal('show');
+        var deviceID = $(this).attr('id');
+        $('#deviceID').val(deviceID);
+        $('#reportDeviceModal').modal('show');
     });
 
     //displaying tables in data table format
-    $('#deviceTable').DataTable();
+    // $('#deviceTable').DataTable();
+    $('#deviceTable').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend: 'pdfHtml5',
+                orientation: 'potrait',
+                pageSize: 'A4'
+            }
+        ]
+    } );
     
     //notify alert add text and fade out fxn
     $('.notify span').click( function () {
@@ -49,6 +59,7 @@ $(document).ready(function() {
                         $('.notify p').text("Device reported successfully");
                         $('.notify').removeClass("alert-danger").addClass("alert-success").fadeIn();
                         $('#reportDeviceForm')[0].reset();
+                        location.reload('true');
                     }else if(output == 'fail'){
                         $('.notify p').text("Server Error, Try Again");
                         $('.notify').addClass("alert-danger").fadeIn();

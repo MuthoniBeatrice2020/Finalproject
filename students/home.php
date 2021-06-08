@@ -1,5 +1,6 @@
     <?php
         //page header load
+        require 'session.php';
         include 'layout/header.php';
     ?>
     <div class="container-fluid">
@@ -10,7 +11,7 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table data-order='[[ 0, "desc" ]]' class="table table-hover" id="deviceTable">
+                    <table id="deviceTable" data-order='[[ 0, "desc" ]]' class="table table-hover display" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Reg No</th>                        
